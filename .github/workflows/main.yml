@@ -1,0 +1,13 @@
+name: Simple Workflow Demo
+
+on: [push]
+
+jobs:
+  build-and-greet:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Greet user
+        run: echo "Hello, GitHub Actions!"
